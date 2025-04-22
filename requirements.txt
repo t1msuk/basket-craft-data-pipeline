@@ -1,5 +1,5 @@
 sqlalchemy
 pandas
 pymysql
-psychopg2-binary
+psycopg2-binary
 dotenv
