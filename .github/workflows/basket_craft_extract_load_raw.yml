@@ -24,22 +24,28 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3 
       
-      - name: Set up python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: Install python dependencies
+      - name: Install Python dependencies
         run: |
-          pip install -r requirements.txt 
-        
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        working-directory: ./ # Adjust if `requirements.txt` is in a subdirectory
+
       - name: Extract and load products into raw schema
         run: | 
+          set -e
           python elt/basket_craft_products_extract_load_raw.py
+        working-directory: ./ # Adjust if `elt` is in a subdirectory
 
       - name: Extract and load orders into raw schema
         run: | 
+          set -e
           python elt/basket_craft_orders_extract_load_raw.py
+        working-directory: ./ # Adjust if `elt` is in a subdirectory
 
 
 
