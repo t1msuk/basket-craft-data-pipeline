@@ -31,7 +31,7 @@ jobs:
 
       - name: Install python dependencies
         run: |
-          pip install -r requirements.txt 
+          pip install -r requirement.txt 
         
       - name: Extract and load products into raw schema
         run: | 
