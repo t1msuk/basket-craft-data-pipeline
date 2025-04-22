@@ -1,4 +1,4 @@
-name : Run Basket Craft Extract and Load to Raw
+name: Run Basket Craft Extract and Load to Raw
 
 on: 
   schedule: 
@@ -15,7 +15,6 @@ env:
   PG_HOST:       ${{ secrets.PG_HOST }}
   PG_DB:         ${{ secrets.PG_DB }}
 
-
 jobs:
   extract-load:
     name: Extract and Load Raw Basket Craft Data to a Raw Schema
@@ -25,24 +24,24 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3 
       
-      -name: Set up python 
+      - name: Set up python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      -name: Install python dependencies
+      - name: Install python dependencies
         run: |
-          pip install -r require.txt 
+          pip install -r requirements.txt 
         
-      -name: Extract and load products into raw schema
+      - name: Extract and load products into raw schema
         run: | 
           python elt/basket_craft_products_extract_load_raw.py
 
-       -name: Extract and load orders into raw schema
+      - name: Extract and load orders into raw schema
         run: | 
           python elt/basket_craft_orders_extract_load_raw.py
 
-      
 
 
-        
+
+
