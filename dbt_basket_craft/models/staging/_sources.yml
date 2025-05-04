@@ -23,9 +23,23 @@ sources:
              - unique
              - not_null
          - name: created_at
-         - name: website_session_id
-         - name: user_id
-         - name: primary_product_id
+         - name: cogs_usd
          - name: items_purchased
          - name: price_usd
-         - name: cogs_usd
+         - name: primary_product_id
+         - name: user_id
+         - name: website_session_id
+     - name: website_sessions
+       columns:
+         - name: website_session_id
+           tests:
+              - unique
+              - not_null
+         - name: created_at
+         - name: user_id
+         - name: is_repeat_session
+         - name: utm_source
+         - name: utm_campaign
+         - name: utm_content
+         - name: device_type
+         - name: http_referer
