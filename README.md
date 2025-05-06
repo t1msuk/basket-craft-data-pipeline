@@ -6,4 +6,4 @@ Finally, I built an interactive Looker Studio dashboard featuring five key visua
 
 Dashboard: https://lookerstudio.google.com/reporting/fb6fe441-91c4-44d6-b298-211d56db621c
 
-![quiz3sqlvisualization](https://github.com/user-attachments/assets/e7b14aa6-a628-4e9f-ae79-4de765b2d711)
+[png2pdf.pdf](https://github.com/user-attachments/files/20052828/png2pdf.pdf)
